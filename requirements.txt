@@ -1,5 +1,4 @@
 transformers>=4.26.0
-datasets>=2.10.0
 sentence-transformers>=2.2.2
 faiss-cpu>=1.7.3
 numpy>=1.22.0
@@ -8,4 +7,6 @@ matplotlib>=3.5.0
 scikit-learn>=1.0.0
 torch>=1.10.0
 ipykernel>=6.0.0
-jupyter>=1.0.0 
+jupyter>=1.0.0
+streamlit>=1.22.0
+requests>=2.28.0 
