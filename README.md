@@ -13,6 +13,13 @@ The system uses transformer-based embeddings to encode news articles and user qu
 - Cross-category content discovery
 - Interactive web interface built with Streamlit
 
+## Live Demo
+
+You can access a live demo of this semantic search system at:
+[https://9flabixjy2bbz7fvhfyzgg.streamlit.app/](https://9flabixjy2bbz7fvhfyzgg.streamlit.app/)
+
+Try it out to explore the capabilities of the system without needing to run the code locally!
+
 ## Setup Instructions
 
 1. Clone this repository

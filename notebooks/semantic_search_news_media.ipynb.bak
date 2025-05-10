@@ -1021,18 +1021,6 @@
     "\n",
     "If you still experience memory issues, you can further reduce the MAX_TRAIN_SAMPLES and MAX_TEST_SAMPLES values."
    ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Live Demo\n",
-    "\n",
-    "You can access a live demo of this semantic search system at:\n",
-    "[https://9flabixjy2bbz7fvhfyzgg.streamlit.app/](https://9flabixjy2bbz7fvhfyzgg.streamlit.app/)\n",
-    "\n",
-    "The demo allows you to try out semantic search queries on the AG News dataset and explore the capabilities of the system without needing to run the code locally."
-   ]
   }
  ],
  "metadata": {
@@ -1057,3 +1045,9 @@
  "nbformat": 4,
  "nbformat_minor": 4
 }
+## Live Demo
+
+You can access a live demo of this semantic search system at:
+[https://9flabixjy2bbz7fvhfyzgg.streamlit.app/](https://9flabixjy2bbz7fvhfyzgg.streamlit.app/)
+
+The demo allows you to try out semantic search queries on the AG News dataset and explore the capabilities of the system without needing to run the code locally.
