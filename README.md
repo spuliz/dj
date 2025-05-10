@@ -1,15 +1,17 @@
-# Semantic Search Project
+# News Semantic Search Project
 
-This project implements a semantic search solution using the Stanford Question Answering Dataset (SQuAD) to create an effective question-answering retrieval system.
+This project implements a semantic search solution for news articles to enhance content discovery and recommendation in media publishing.
 
 ## Project Overview
 
-The system uses transformer-based embeddings to encode questions and passages, then performs semantic similarity search to retrieve the most relevant passages for a given question.
+The system uses transformer-based embeddings to encode news articles and user queries, then performs semantic similarity search to retrieve the most relevant news content. This enables more effective content discovery beyond simple keyword matching.
 
-### Key Components:
-- Sentence-BERT for creating semantic embeddings
-- FAISS for efficient similarity search
-- Evaluation using Recall@k and Mean Reciprocal Rank
+### Key Features:
+- Semantic search for news articles using natural language queries
+- Category-based organization and filtering (World, Sports, Business, Science/Technology)
+- Color-coded search results with relevance scoring
+- Cross-category content discovery
+- Interactive web interface built with Streamlit
 
 ## Setup Instructions
 
@@ -18,28 +20,50 @@ The system uses transformer-based embeddings to encode questions and passages, t
    ```
    pip install -r requirements.txt
    ```
-3. Run Jupyter Notebook:
+3. Run the Streamlit app:
    ```
-   jupyter notebook
+   streamlit run news_search_app.py
    ```
-4. Open `notebooks/semantic_search_project.ipynb` to explore the implementation
+4. Your browser should automatically open to `http://localhost:8501`
 
 ## Dataset
 
-The project uses the Stanford Question Answering Dataset (SQuAD), a reading comprehension dataset consisting of questions posed on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage.
+The project uses the AG News Corpus, a collection of news articles across four categories:
+- World
+- Sports
+- Business
+- Science/Technology
 
-## Project Structure
+The dataset is automatically downloaded the first time you run the application.
 
-```
-├── data/               # Data directory (dataset will be downloaded via HuggingFace)
-├── notebooks/          # Jupyter notebooks for implementation
-│   └── semantic_search_project.ipynb
-├── README.md           # This file
-└── requirements.txt    # Project dependencies
-```
+## Implementation Details
 
-## Evaluation Metrics
+### Pipeline:
+1. **Data Preprocessing**: Load AG News articles, extract text and categories
+2. **Feature Engineering**: Create dense vector embeddings for news content using Sentence-BERT
+3. **Indexing**: Build a FAISS index for efficient similarity search
+4. **Search**: Encode user queries and retrieve the most semantically similar articles
+5. **Evaluation**: Measure relevance and category precision
 
-The system is evaluated using:
-- Recall@k: Measures whether the relevant passage is among the top k retrieved results
-- Mean Reciprocal Rank (MRR): Measures the ranking quality of the retrieval system
+### Technologies Used:
+- Sentence-Transformers for creating semantic embeddings
+- FAISS for efficient similarity search
+- Streamlit for the interactive web interface
+- Pandas & NumPy for data manipulation
+
+## Example Queries
+
+Try searching for:
+- "Latest developments in artificial intelligence"
+- "Soccer match results and player transfers"
+- "Stock market trends and economic outlook"
+- "International politics and diplomatic relations"
+
+## Practical Applications
+
+This semantic search system can be integrated into news platforms to:
+1. Enhance search functionality for readers
+2. Power "related articles" recommendations
+3. Create topic-based content collections
+4. Support journalists in research by finding relevant past coverage
+5. Increase user engagement through better content discovery
